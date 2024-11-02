@@ -1,6 +1,6 @@
 site_name: Simple Model
-repo_name: bybatkhuu/model.python-template
-repo_url: https://github.com/bybatkhuu/model.python-template
+repo_name: akiyomov/byteswap
+repo_url: https://github.com/akiyomov/byteswap
 theme:
   name: material
   # name: readthedocs

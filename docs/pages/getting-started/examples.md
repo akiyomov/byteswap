@@ -18,7 +18,7 @@ import numpy as np
 from numpy.typing import NDArray
 
 ## Internal modules
-from simple_model import SimpleModel
+from byteswap import SimpleModel
 
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)

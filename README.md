@@ -1,8 +1,10 @@
-# Model Template (AI/ML) module
+# ByteSwap
+
+This is a ByteSwap project.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bybatkhuu/model.python-template/2.build-publish.yml?logo=GitHub)](https://github.com/bybatkhuu/model.python-template/actions/workflows/2.build-publish.yml)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/bybatkhuu/model.python-template?logo=GitHub)](https://github.com/bybatkhuu/model.python-template/releases)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/akiyomov/byteswap/2.build-publish.yml?logo=GitHub)](https://github.com/akiyomov/byteswap/actions/workflows/2.build-publish.yml)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/akiyomov/byteswap?logo=GitHub)](https://github.com/akiyomov/byteswap/releases)
 
 This is a template repo for AI/ML model module.
 
@@ -52,15 +54,15 @@ cd ~/workspaces/projects
 **A.** Clone the repository:
 
 ```sh
-git clone git@github.com:bybatkhuu/model.python-template.git simple_model && \
-    cd simple_model
+git clone git@github.com:akiyomov/byteswap.git byteswap && \
+    cd byteswap
 ```
 
 **B.** Download source code (for **offline** environment):
 
-1. Download archived **zip** file from [**releases**](https://github.com/bybatkhuu/model.python-template/releases).
+1. Download archived **zip** file from [**releases**](https://github.com/akiyomov/byteswap/releases).
 2. Extract it into the project directory.
-3. Rename the extracted directory from **`model.python-template`** to **`simple_model`**.
+3. Rename the extracted directory from **`byteswap`** to **`byteswap`**.
 
 ### 3. Install the module
 
@@ -85,19 +87,19 @@ pip install -r ./requirements/requirements.dev.txt
 **C.** Install directly from git repository:
 
 ```sh
-pip install git+https://github.com/bybatkhuu/model.python-template.git
+pip install git+https://github.com/akiyomov/byteswap.git
 ```
 
 **D.** Install from **pre-built package** files (for **PRODUCTION**):
 
-1. Download **`.whl`** or **`.tar.gz`** file from [**releases**](https://github.com/bybatkhuu/model.python-template/releases).
+1. Download **`.whl`** or **`.tar.gz`** file from [**releases**](https://github.com/akiyomov/byteswap/releases).
 2. Install with pip:
 
 ```sh
 # Install from .whl file:
-pip install ./simple_model-[VERSION]-py3-none-any.whl
+pip install ./byteswap-[VERSION]-py3-none-any.whl
 # Or install from .tar.gz file:
-pip install ./simple_model-[VERSION].tar.gz
+pip install ./byteswap-[VERSION].tar.gz
 ```
 
 **E.** Build the **package** and install with **pip**:
@@ -110,9 +112,9 @@ pip install -U pip build
 python -m build
 
 # Install from .whl file:
-pip install ./dist/simple_model-[VERSION]-py3-none-any.whl
+pip install ./dist/byteswap-[VERSION]-py3-none-any.whl
 # Or install from .tar.gz file:
-pip install ./dist/simple_model-[VERSION].tar.gz
+pip install ./dist/byteswap-[VERSION].tar.gz
 ```
 
 **F.** Copy the **module** into the project directory (for **testing**):
@@ -122,9 +124,9 @@ pip install ./dist/simple_model-[VERSION].tar.gz
 pip install -r ./requirements.txt
 
 # Copy the module source code into the project:
-cp -r ./src/simple_model [PROJECT_DIR]
+cp -r ./src/byteswap [PROJECT_DIR]
 # For example:
-cp -r ./src/simple_model /some/path/project/
+cp -r ./src/byteswap /some/path/project/
 ```
 
 **G.** Manually add module path into **PYTHONPATH** (not recommended):
@@ -136,14 +138,14 @@ export PYTHONPATH="${PWD}/src:${PYTHONPATH}"
 # Or add the module path to PYTHONPATH:
 export PYTHONPATH="[MODULE_PATH]:${PYTHONPATH}"
 # For example:
-export PYTHONPATH="/some/path/model.python-template/src:${PYTHONPATH}"
+export PYTHONPATH="/some/path/byteswap/src:${PYTHONPATH}"
 ```
 
 ## Usage/Examples
 
 ### Simple
 
-[**`examples/simple/main.py`**](https://github.com/bybatkhuu/model.python-template/blob/main/examples/simple/main.py):
+[**`examples/simple/main.py`**](https://github.com/akiyomov/byteswap/blob/main/examples/simple/main.py):
 
 ```python
 #!/usr/bin/env python
@@ -159,7 +161,7 @@ import numpy as np
 from numpy.typing import NDArray
 
 ## Internal modules
-from simple_model import SimpleModel
+from byteswap import SimpleModel
 
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
@@ -212,10 +214,10 @@ if __name__ == "__main__":
 
 ## Configuration
 
-[**`templates/configs/config.yml`**](https://github.com/bybatkhuu/model.python-template/blob/main/templates/configs/config.yml):
+[**`templates/configs/config.yml`**](https://github.com/akiyomov/byteswap/blob/main/templates/configs/config.yml):
 
 ```yaml
-simple_model:                                       # Just an example to group the configs (Not necessary)
+byteswap:                                       # Just an example to group the configs (Not necessary)
   models_dir: "./models"                              # Directory where the models are saved
   model_name: "linear_regression.v0.0.1-240101"     # Name of the model as sub-directory
   threshold: 0.5                                    # Threshold for similarity check
@@ -223,7 +225,7 @@ simple_model:                                       # Just an example to group t
 
 ### Environment Variables
 
-[**`.env.example`**](https://github.com/bybatkhuu/model.python-template/blob/main/.env.example):
+[**`.env.example`**](https://github.com/akiyomov/byteswap/blob/main/.env.example):
 
 ```sh
 # ENV=development
@@ -279,47 +281,47 @@ mkdocs build
 
 ## Documentation
 
-- [Docs](https://github.com/bybatkhuu/model.python-template/blob/main/docs)
-- [Home](https://github.com/bybatkhuu/model.python-template/blob/main/docs/README.md)
+- [Docs](https://github.com/akiyomov/byteswap/blob/main/docs)
+- [Home](https://github.com/akiyomov/byteswap/blob/main/docs/README.md)
 
 ### Getting Started
 
-- [Prerequisites](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/getting-started/prerequisites.md)
-- [Installation](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/getting-started/installation.md)
-- [Configuration](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/getting-started/configuration.md)
-- [Examples](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/getting-started/examples.md)
-- [Error Codes](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/getting-started/error-codes.md)
+- [Prerequisites](https://github.com/akiyomov/byteswap/blob/main/docs/pages/getting-started/prerequisites.md)
+- [Installation](https://github.com/akiyomov/byteswap/blob/main/docs/pages/getting-started/installation.md)
+- [Configuration](https://github.com/akiyomov/byteswap/blob/main/docs/pages/getting-started/configuration.md)
+- [Examples](https://github.com/akiyomov/byteswap/blob/main/docs/pages/getting-started/examples.md)
+- [Error Codes](https://github.com/akiyomov/byteswap/blob/main/docs/pages/getting-started/error-codes.md)
 
-### [API Documentation](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/api-docs/README.md)
+### [API Documentation](https://github.com/akiyomov/byteswap/blob/main/docs/pages/api-docs/README.md)
 
 ### Development
 
-- [Test](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/dev/test.md)
-- [Build](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/dev/build.md)
-- [Docs](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/dev/docs.md)
-- [CI/CD](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/dev/cicd.md)
-- [Scripts](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/dev/scripts/README.md)
-- [File Structure](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/dev/file-structure.md)
-- [Sitemap](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/dev/sitemap.md)
-- [Contributing](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/dev/contributing.md)
-- [Roadmap](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/dev/roadmap.md)
+- [Test](https://github.com/akiyomov/byteswap/blob/main/docs/pages/dev/test.md)
+- [Build](https://github.com/akiyomov/byteswap/blob/main/docs/pages/dev/build.md)
+- [Docs](https://github.com/akiyomov/byteswap/blob/main/docs/pages/dev/docs.md)
+- [CI/CD](https://github.com/akiyomov/byteswap/blob/main/docs/pages/dev/cicd.md)
+- [Scripts](https://github.com/akiyomov/byteswap/blob/main/docs/pages/dev/scripts/README.md)
+- [File Structure](https://github.com/akiyomov/byteswap/blob/main/docs/pages/dev/file-structure.md)
+- [Sitemap](https://github.com/akiyomov/byteswap/blob/main/docs/pages/dev/sitemap.md)
+- [Contributing](https://github.com/akiyomov/byteswap/blob/main/docs/pages/dev/contributing.md)
+- [Roadmap](https://github.com/akiyomov/byteswap/blob/main/docs/pages/dev/roadmap.md)
 
 ### Research
 
-- [Reports](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/research/reports.md)
-- [Benchmarks](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/research/benchmarks.md)
-- [References](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/research/references.md)
+- [Reports](https://github.com/akiyomov/byteswap/blob/main/docs/pages/research/reports.md)
+- [Benchmarks](https://github.com/akiyomov/byteswap/blob/main/docs/pages/research/benchmarks.md)
+- [References](https://github.com/akiyomov/byteswap/blob/main/docs/pages/research/references.md)
 
-### [Release Notes](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/release-notes.md)
+### [Release Notes](https://github.com/akiyomov/byteswap/blob/main/docs/pages/release-notes.md)
 
-### [Blog](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/blog/README.md)
+### [Blog](https://github.com/akiyomov/byteswap/blob/main/docs/pages/blog/README.md)
 
 ### About
 
-- [FAQ](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/about/faq.md)
-- [Authors](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/about/authors.md)
-- [Contact](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/about/contact.md)
-- [License](https://github.com/bybatkhuu/model.python-template/blob/main/docs/pages/about/license.md)
+- [FAQ](https://github.com/akiyomov/byteswap/blob/main/docs/pages/about/faq.md)
+- [Authors](https://github.com/akiyomov/byteswap/blob/main/docs/pages/about/authors.md)
+- [Contact](https://github.com/akiyomov/byteswap/blob/main/docs/pages/about/contact.md)
+- [License](https://github.com/akiyomov/byteswap/blob/main/docs/pages/about/license.md)
 
 ---
 

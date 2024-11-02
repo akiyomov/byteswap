@@ -52,7 +52,7 @@ jobs:
       #     ./scripts/build.sh -c -u
       #     rm -rfv ~/.pypirc
       #   run: |
-      #     echo -e "[pypi]\nusername = __token__\npassword = ${{ secrets.PYPI_API_TOKEN }}" > ~/.pypirc
+      #     echo -e "[pypi]\nusername = __token__\npassword =  ${{ secrets.PYPI_API_TOKEN }}" > ~/.pypirc
       #     ./scripts/build.sh -c -u -p
       #     rm -rfv ~/.pypirc
       - name: Build the package
@@ -61,4 +61,5 @@ jobs:
       - name: Create release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
         run: gh release create v$(./scripts/get-version.sh) ./dist/* --generate-notes

@@ -17,15 +17,15 @@ cd ~/workspaces/projects
 **A.** Clone the repository:
 
 ```sh
-git clone git@github.com:bybatkhuu/model.python-template.git simple_model && \
-    cd simple_model
+git clone git@github.com:akiyomov/byteswap.git byteswap && \
+    cd byteswap
 ```
 
 **B.** Download source code (for **offline** environment):
 
-1. Download archived **zip** file from [**releases**](https://github.com/bybatkhuu/model.python-template/releases).
+1. Download archived **zip** file from [**releases**](https://github.com/akiyomov/byteswap/releases).
 2. Extract it into the project directory.
-3. Rename the extracted directory from **`model.python-template`** to **`simple_model`**.
+3. Rename the extracted directory from **`byteswap`** to **`byteswap`**.
 
 ### 2. Install the module
 
@@ -50,19 +50,19 @@ pip install -r ./requirements/requirements.dev.txt
 **C.** Install directly from git repository:
 
 ```sh
-pip install git+https://github.com/bybatkhuu/model.python-template.git
+pip install git+https://github.com/akiyomov/byteswap.git
 ```
 
 **D.** Install from **pre-built package** files (for **PRODUCTION**):
 
-1. Download **`.whl`** or **`.tar.gz`** file from [**releases**](https://github.com/bybatkhuu/model.python-template/releases).
+1. Download **`.whl`** or **`.tar.gz`** file from [**releases**](https://github.com/akiyomov/byteswap/releases).
 2. Install with pip:
 
 ```sh
 # Install from .whl file:
-pip install ./simple_model-[VERSION]-py3-none-any.whl
+pip install ./byteswap-[VERSION]-py3-none-any.whl
 # Or install from .tar.gz file:
-pip install ./simple_model-[VERSION].tar.gz
+pip install ./byteswap-[VERSION].tar.gz
 ```
 
 **E.** Build the **package** and install with **pip**:
@@ -75,9 +75,9 @@ pip install -U pip build
 python -m build
 
 # Install from .whl file:
-pip install ./dist/simple_model-[VERSION]-py3-none-any.whl
+pip install ./dist/byteswap-[VERSION]-py3-none-any.whl
 # Or install from .tar.gz file:
-pip install ./dist/simple_model-[VERSION].tar.gz
+pip install ./dist/byteswap-[VERSION].tar.gz
 ```
 
 **F.** Copy the **module** into the project directory (for **testing**):
@@ -87,9 +87,9 @@ pip install ./dist/simple_model-[VERSION].tar.gz
 pip install -r ./requirements.txt
 
 # Copy the module source code into the project:
-cp -r ./src/simple_model [PROJECT_DIR]
+cp -r ./src/byteswap [PROJECT_DIR]
 # For example:
-cp -r ./src/simple_model /some/path/project/
+cp -r ./src/byteswap /some/path/project/
 ```
 
 **G.** Manually add module path into **PYTHONPATH** (not recommended):
@@ -101,5 +101,5 @@ export PYTHONPATH="${PWD}/src:${PYTHONPATH}"
 # Or add the module path to PYTHONPATH:
 export PYTHONPATH="[MODULE_PATH]:${PYTHONPATH}"
 # For example:
-export PYTHONPATH="/some/path/model.python-template/src:${PYTHONPATH}"
+export PYTHONPATH="/some/path/byteswap/src:${PYTHONPATH}"
 ```

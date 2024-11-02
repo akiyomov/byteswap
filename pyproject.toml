@@ -3,13 +3,13 @@ requires = ["setuptools>=70.3.0,<80.0.0", "setuptools-scm>=8.0.4,<9.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "simple_model"
-authors = [{ name = "Batkhuu Byambajav", email = "batkhuu10@gmail.com" }]
-description = "'simple_model' is a template module for python AI/ML model."
+name = "byteswap"
+authors = [{ name = "Asadbek Kiyomov", email = "asadbey0331@gmail.com" }]
+description = "decentralized data sharing platform support framework"
 readme = "README.md"
 requires-python = ">=3.9,<4.0"
 keywords = [
-	"simple_model",
+	"byteswap",
 	"model",
 	"module",
 	"template",
@@ -35,17 +35,17 @@ dynamic = ["version", "dependencies", "optional-dependencies"]
 
 # [tool.setuptools.packages.find]
 # where = ["src"]
-# include = ["simple_model*"]
+# include = ["byteswap*"]
 # namespaces = false
 
 [tool.setuptools.dynamic]
-version = { attr = "simple_model.__version__.__version__" }
+version = { attr = "byteswap.__version__.__version__" }
 dependencies = { file = "./requirements.txt" }
 # optional-dependencies.gpu = { file = ["./requirements/requirements.gpu.txt"] }
 
 [project.urls]
-Homepage = "https://github.com/bybatkhuu/model.python-template"
-Documentation = "https://bybatkhuu.github.io/model.python-template"
-Repository = "https://github.com/bybatkhuu/model.python-template.git"
-Issues = "https://github.com/bybatkhuu/model.python-template/issues"
-Changelog = "https://github.com/bybatkhuu/model.python-template/CHANGELOG.md"
+Homepage = "https://github.com/akiyomov/byteswap"
+Documentation = "https://akiyomov.github.io/byteswap"
+Repository = "https://github.com/akiyomov/byteswap.git"
+Issues = "https://github.com/akiyomov/byteswap/issues"
+Changelog = "https://github.com/akiyomov/byteswap/CHANGELOG.md"

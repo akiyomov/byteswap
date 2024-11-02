@@ -7,7 +7,7 @@ Pydantic will raise a `ValidationError` whenever it finds an error in the data i
 ```python
 from pydantic import ValidationError
 
-from simple_model import SimpleModel
+from byteswap import SimpleModel
 
 
 try:

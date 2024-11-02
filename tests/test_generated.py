@@ -9,9 +9,9 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 try:
-    from simple_model import SimpleModel, ModelConfigPM
+    from byteswap import SimpleModel, ModelConfigPM
 except ImportError:
-    from src.simple_model import SimpleModel, ModelConfigPM
+    from src.byteswap import SimpleModel, ModelConfigPM
 
 logger = logging.getLogger(__name__)
 
